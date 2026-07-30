@@ -1,10 +1,8 @@
 # ⚙️ הגדרות מערכת הניהול (Sveltia CMS)
 # ------------------------------------------------------------------
-# ⚠️ לפני העלייה לאוויר: החליפו את OWNER/REPO בשם המשתמש והריפו שלכם ב-GitHub
-#    לדוגמה:  repo: shimonc29/bikurey-shiloh
 backend:
   name: github
-  repo: OWNER/REPO
+  repo: shimonc29/bikurey-shiloh
   branch: main
 
 # מיקום שמירת תמונות שמועלות דרך הממשק
