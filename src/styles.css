@@ -353,3 +353,56 @@ img { max-width: 100%; display: block; }
   .form-row { grid-template-columns: 1fr; }
   .hero { min-height: 88vh; }
 }
+
+/* ---------- גלריית אלבומים (קישור לגוגל פוטוס) ---------- */
+.album-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+.album-card {
+  display: block; background: var(--white); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-sm); transition: transform .22s ease, box-shadow .22s ease;
+  text-decoration: none; color: inherit;
+}
+.album-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.album-cover { aspect-ratio: 4/3; overflow: hidden; }
+.album-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.album-card:hover .album-cover img { transform: scale(1.06); }
+.album-body { padding: 18px 20px 22px; }
+.album-heading { font-size: 1.3rem; margin-bottom: 6px; color: var(--ink); }
+.album-caption { color: var(--text-soft); font-size: .98rem; margin-bottom: 12px; }
+.album-cta { display: inline-block; font-weight: 700; color: var(--grape); }
+.album-card:hover .album-cta { color: var(--grape-deep); }
+.album-cta-soon, .album-card-soon .album-cta { color: var(--text-soft); font-weight: 600; }
+.album-card-soon { cursor: default; }
+.album-card-soon:hover { transform: none; box-shadow: var(--shadow-sm); }
+.album-card-soon:hover .album-cover img { transform: none; }
+
+/* ---------- פופאפ כניסה ---------- */
+.popup-overlay {
+  position: fixed; inset: 0; z-index: 2000; padding: 20px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(28, 21, 75, .72);
+  opacity: 0; transition: opacity .25s ease;
+}
+.popup-overlay.open { opacity: 1; }
+.popup-overlay[hidden] { display: none; }
+.popup-box {
+  position: relative; width: 100%; max-width: 560px;
+  background: var(--white); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transform: translateY(12px) scale(.98); transition: transform .25s ease;
+}
+.popup-overlay.open .popup-box { transform: translateY(0) scale(1); }
+.popup-box img { display: block; width: 100%; height: auto; }
+.popup-img-link { display: block; }
+.popup-close {
+  position: absolute; top: 10px; inset-inline-end: 10px;
+  width: 40px; height: 40px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(255, 255, 255, .92); color: var(--ink); font-size: 1.6rem; line-height: 1;
+  display: grid; place-items: center; box-shadow: var(--shadow-sm); z-index: 2;
+  transition: background .15s ease, transform .15s ease;
+}
+.popup-close:hover { background: #fff; transform: scale(1.08); }

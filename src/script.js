@@ -65,4 +65,37 @@
       window.open(url, '_blank');
     });
   }
+
+  // פופאפ כניסה — מוצג פעם אחת למבקר (נזכר דרך localStorage)
+  var popup = document.getElementById('sitePopup');
+  if (popup) {
+    var SEEN_KEY = 'bs_popup_seen';
+    var alreadySeen = false;
+    try { alreadySeen = localStorage.getItem(SEEN_KEY) === '1'; } catch (e) {}
+
+    function closePopup() {
+      popup.classList.remove('open');
+      popup.setAttribute('hidden', '');
+      try { localStorage.setItem(SEEN_KEY, '1'); } catch (e) {}
+    }
+
+    if (!alreadySeen) {
+      // השהיה קטנה כדי שהעמוד ייטען לפני שהפופאפ קופץ
+      setTimeout(function () {
+        popup.removeAttribute('hidden');
+        popup.classList.add('open');
+      }, 700);
+
+      var closeBtn = document.getElementById('popupClose');
+      if (closeBtn) closeBtn.addEventListener('click', closePopup);
+      // סגירה בלחיצה על הרקע (מחוץ לתמונה)
+      popup.addEventListener('click', function (e) {
+        if (e.target === popup) closePopup();
+      });
+      // סגירה עם Esc
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && popup.classList.contains('open')) closePopup();
+      });
+    }
+  }
 })();

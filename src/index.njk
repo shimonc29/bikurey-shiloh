@@ -156,14 +156,29 @@ permalink: /index.html
         <video src="{{ siteContent.gallery.video }}" poster="{{ siteContent.gallery.poster }}" controls playsinline muted loop preload="metadata"></video>
       </div>
 
-      {%- for group in siteContent.gallery.groups %}
-      <h3 class="gallery-heading">{{ group.heading }}</h3>
-      <div class="gallery-grid">
-        {%- for img in group.images %}
-        <figure{% if img.size == 'wide' %} class="g-wide"{% elif img.size == 'tall' %} class="g-tall"{% endif %}><img src="{{ img.src }}" alt="{{ img.alt }}" /></figure>
+      <div class="album-cards">
+        {%- for album in siteContent.gallery.albums %}
+        {%- if album.albumUrl %}
+        <a class="album-card" href="{{ album.albumUrl }}" target="_blank" rel="noopener">
+          <div class="album-cover"><img src="{{ album.cover }}" alt="{{ album.heading }}" /></div>
+          <div class="album-body">
+            <h3 class="album-heading">{{ album.heading }}</h3>
+            {%- if album.caption %}<p class="album-caption">{{ album.caption }}</p>{%- endif %}
+            <span class="album-cta">צפו באלבום המלא ←</span>
+          </div>
+        </a>
+        {%- else %}
+        <div class="album-card album-card-soon">
+          <div class="album-cover"><img src="{{ album.cover }}" alt="{{ album.heading }}" /></div>
+          <div class="album-body">
+            <h3 class="album-heading">{{ album.heading }}</h3>
+            {%- if album.caption %}<p class="album-caption">{{ album.caption }}</p>{%- endif %}
+            <span class="album-cta album-cta-soon">האלבום יעודכן בקרוב</span>
+          </div>
+        </div>
+        {%- endif %}
         {%- endfor %}
       </div>
-      {%- endfor %}
     </div>
   </section>
 
@@ -312,6 +327,20 @@ permalink: /index.html
 
   <!-- WhatsApp צף -->
   <a href="https://wa.me/{{ siteContent.site.whatsappNumber }}?text=%D7%94%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20%D7%91%D7%99%D7%9B%D7%95%D7%A8%D7%99%20%D7%A9%D7%99%D7%9C%D7%94" class="wa-float" target="_blank" rel="noopener" aria-label="וואטסאפ">{{ waSvg | safe }}</a>
+
+  {%- if siteContent.popup.enabled %}
+  <!-- פופאפ כניסה -->
+  <div class="popup-overlay" id="sitePopup" hidden>
+    <div class="popup-box" role="dialog" aria-modal="true" aria-label="הודעת פתיחה">
+      <button class="popup-close" id="popupClose" aria-label="סגירה">&times;</button>
+      {%- if siteContent.popup.link %}
+      <a href="{{ siteContent.popup.link }}" class="popup-img-link"><img src="{{ siteContent.popup.image }}" alt="{{ siteContent.popup.alt }}" /></a>
+      {%- else %}
+      <img src="{{ siteContent.popup.image }}" alt="{{ siteContent.popup.alt }}" />
+      {%- endif %}
+    </div>
+  </div>
+  {%- endif %}
 
   <script src="script.js"></script>
 </body>

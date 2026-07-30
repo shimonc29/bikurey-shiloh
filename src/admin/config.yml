@@ -180,25 +180,14 @@ collections:
                 media_folder: "src/assets"
                 public_folder: "/assets"
               - { label: "תמונת פתיחה לוידאו (poster)", name: "poster", widget: "image" }
-              - label: "קבוצות תמונות"
-                name: "groups"
+              - label: "אלבומים (קישור לגוגל פוטוס)"
+                name: "albums"
                 widget: "list"
                 fields:
-                  - { label: "כותרת הקבוצה", name: "heading", widget: "string" }
-                  - label: "תמונות"
-                    name: "images"
-                    widget: "list"
-                    fields:
-                      - { label: "תמונה", name: "src", widget: "image" }
-                      - { label: "תיאור (נגישות)", name: "alt", widget: "string" }
-                      - label: "גודל בגלריה"
-                        name: "size"
-                        widget: "select"
-                        options:
-                          - { label: "רגיל", value: "" }
-                          - { label: "רחב", value: "wide" }
-                          - { label: "גבוה", value: "tall" }
-                        required: false
+                  - { label: "כותרת האלבום", name: "heading", widget: "string" }
+                  - { label: "תמונת שער", name: "cover", widget: "image" }
+                  - { label: "כיתוב קצר", name: "caption", widget: "string", required: false }
+                  - { label: "קישור לאלבום בגוגל פוטוס (הדביקו כאן)", name: "albumUrl", widget: "string", required: false }
 
           # ---------- עונתיות ----------
           - label: "עונת הבציר"
@@ -274,3 +263,14 @@ collections:
                   - { label: "קישור", name: "href", widget: "string" }
               - { label: "כותרת עמודת יצירת קשר", name: "contactTitle", widget: "string" }
               - { label: "שורת זכויות יוצרים", name: "copyright", widget: "string" }
+
+          # ---------- פופאפ כניסה ----------
+          - label: "פופאפ כניסה (חלון קופץ)"
+            name: "popup"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "להציג פופאפ?", name: "enabled", widget: "boolean", default: true }
+              - { label: "תמונה", name: "image", widget: "image" }
+              - { label: "תיאור תמונה (נגישות)", name: "alt", widget: "string" }
+              - { label: "קישור בלחיצה (לא חובה — למשל #contact)", name: "link", widget: "string", required: false }

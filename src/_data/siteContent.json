@@ -276,81 +276,24 @@
     "lead": "הצצה לחוויות שלנו — בציר, נופש משפחתי ואירועים בבוסתן.",
     "video": "assets/gallery-video-1.mp4",
     "poster": "assets/images/video-poster.jpg",
-    "groups": [
+    "albums": [
       {
         "heading": "🍇 בציר",
-        "images": [
-          {
-            "src": "assets/images/bazir-vineyard.jpg",
-            "alt": "כרמי שילה",
-            "size": "wide"
-          },
-          {
-            "src": "assets/images/story-era-portrait.jpg",
-            "alt": "עירא בכרמים",
-            "size": ""
-          },
-          {
-            "src": "assets/images/hero-aerial.jpg",
-            "alt": "מבט על הכרמים",
-            "size": ""
-          }
-        ]
+        "cover": "assets/images/bazir-vineyard.jpg",
+        "caption": "רגעים מהבציר בכרמי שילה",
+        "albumUrl": ""
       },
       {
         "heading": "🏡 חוויה משפחתית",
-        "images": [
-          {
-            "src": "assets/images/family-hammocks.jpg",
-            "alt": "המאקים בבוסתן",
-            "size": "tall"
-          },
-          {
-            "src": "assets/images/family-foosball.jpg",
-            "alt": "משחקי שולחן",
-            "size": ""
-          },
-          {
-            "src": "assets/images/family-pita.jpg",
-            "alt": "הכנת פיתות",
-            "size": ""
-          },
-          {
-            "src": "assets/images/agri-tractor.jpg",
-            "alt": "סיור טרקטור",
-            "size": ""
-          },
-          {
-            "src": "assets/images/games-collage.jpg",
-            "alt": "פעילויות ומשחקים",
-            "size": ""
-          }
-        ]
+        "cover": "assets/images/family-hammocks.jpg",
+        "caption": "יום כיף ובילוי בבוסתן",
+        "albumUrl": ""
       },
       {
         "heading": "🎉 אירועים בבוסתן",
-        "images": [
-          {
-            "src": "assets/images/event-buffet.jpg",
-            "alt": "מזנון אירוע",
-            "size": "wide"
-          },
-          {
-            "src": "assets/images/event-flowers.jpg",
-            "alt": "עריכת שולחן פסטורלית",
-            "size": ""
-          },
-          {
-            "src": "assets/images/event-bbq.jpg",
-            "alt": "על האש בבוסתן",
-            "size": ""
-          },
-          {
-            "src": "assets/images/event-group.jpg",
-            "alt": "מפגש בבוסתן",
-            "size": ""
-          }
-        ]
+        "cover": "assets/images/event-buffet.jpg",
+        "caption": "אירועים בלב הטבע",
+        "albumUrl": ""
       }
     ]
   },
@@ -462,5 +405,11 @@
     ],
     "contactTitle": "יצירת קשר",
     "copyright": "ביכורי שילה · משק רפפורט · נחל שילה. כל הזכויות שמורות."
+  },
+  "popup": {
+    "enabled": true,
+    "image": "assets/images/bazir-vineyard.jpg",
+    "alt": "ברוכים הבאים לביכורי שילה",
+    "link": ""
   }
 }
