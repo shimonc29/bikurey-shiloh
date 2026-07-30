@@ -1,0 +1,355 @@
+/* =========================================================
+   ביכורי שילה — עמוד נחיתה
+   RTL · עברית · רספונסיבי
+   ========================================================= */
+
+:root {
+  /* צבעים מהלוגו/פוסטר */
+  --cream: #faf6ee;
+  --cream-2: #f3ecdd;
+  --ink: #1c154b;         /* נייבי מהלוגו — כותרות */
+  --ink-soft: #3d3670;
+  --grape: #6c3473;       /* סגול־ענבים מהלוגו */
+  --grape-deep: #4c2452;
+  --berry: #d83847;       /* אדום־דובדבן מהלוגו */
+  --berry-deep: #b42a38;
+  --leaf: #8bab43;        /* ירוק־עלה מהלוגו */
+  --leaf-deep: #6b8a30;
+  --gold: #d9a441;
+  --white: #ffffff;
+  --text: #3a3752;
+  --text-soft: #6b6885;
+  --whatsapp: #25d366;
+
+  --shadow-sm: 0 2px 10px rgba(44, 42, 90, 0.08);
+  --shadow-md: 0 10px 30px rgba(44, 42, 90, 0.12);
+  --shadow-lg: 0 20px 50px rgba(44, 42, 90, 0.18);
+  --radius: 22px;
+  --radius-sm: 14px;
+  --maxw: 1180px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+
+body {
+  font-family: 'Assistant', 'Heebo', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+  direction: rtl;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Frank Ruhl Libre', 'Assistant', serif;
+  color: var(--ink);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+
+.section { padding: 88px 0; position: relative; }
+.section--tight { padding: 60px 0; }
+
+.eyebrow {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--berry);
+  font-size: .95rem;
+  margin-bottom: 12px;
+}
+.section-title { font-size: clamp(1.9rem, 4vw, 3rem); margin-bottom: 14px; }
+.section-lead { font-size: 1.15rem; color: var(--text-soft); max-width: 640px; }
+.center { text-align: center; }
+.center .section-lead { margin-inline: auto; }
+
+/* ---------- כפתורים ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 14px 28px; border-radius: 100px;
+  font-weight: 700; font-size: 1.02rem; cursor: pointer;
+  border: 2px solid transparent; transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  font-family: inherit;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--berry); color: #fff; box-shadow: 0 8px 22px rgba(200,69,90,.35); }
+.btn-primary:hover { background: var(--berry-deep); }
+.btn-grape { background: var(--grape); color: #fff; box-shadow: 0 8px 22px rgba(110,63,158,.32); }
+.btn-grape:hover { background: var(--grape-deep); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: #fff; }
+.btn-wa { background: var(--whatsapp); color: #fff; box-shadow: 0 8px 22px rgba(37,211,102,.35); }
+.btn-wa:hover { background: #1eb457; }
+.btn-lg { padding: 17px 36px; font-size: 1.1rem; }
+
+/* ---------- ניווט ---------- */
+.nav {
+  position: fixed; top: 0; inset-inline: 0; z-index: 100;
+  background: rgba(250, 246, 238, .95);
+  border-bottom: 1px solid rgba(44,42,90,.08);
+  transition: box-shadow .25s ease;
+}
+.nav.scrolled { box-shadow: var(--shadow-sm); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand-mark {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 2px solid rgba(28,21,75,.15);
+  background: var(--white); object-fit: cover; object-position: center 60%;
+  padding: 3px; box-shadow: var(--shadow-sm);
+}
+.brand-name { font-family: 'Frank Ruhl Libre', serif; font-weight: 800; font-size: 1.4rem; color: var(--ink); }
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a { font-weight: 600; color: var(--ink-soft); font-size: 1rem; transition: color .15s; }
+.nav-links a:hover { color: var(--berry); }
+.nav-cta { display: flex; align-items: center; gap: 12px; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 1.6rem; color: var(--ink); }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative; min-height: 90vh; display: flex; align-items: center;
+  padding: 100px 0 44px; text-align: center;
+}
+.hero-bg { position: absolute; inset: 0; z-index: -2; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+.hero::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(250,246,238,.12) 0%, rgba(250,246,238,.04) 45%, rgba(250,246,238,.5) 100%);
+}
+.hero-content { max-width: 860px; margin: 0 auto; }
+.hero-panel {
+  background: rgba(250,246,238,.82);
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 30px;
+  padding: 40px 46px;
+  box-shadow: 0 20px 50px rgba(44,42,90,.16);
+  display: inline-block; max-width: 780px;
+}
+.hero-badge {
+  display: inline-flex; gap: 8px; align-items: center;
+  background: #fff; border: 1px solid rgba(44,42,90,.12); color: var(--ink-soft);
+  padding: 8px 18px; border-radius: 100px; font-weight: 700; font-size: .95rem; margin-bottom: 18px;
+}
+.hero h1 { color: var(--ink); font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 800; margin-bottom: 6px; }
+.hero-sub { font-size: clamp(1.15rem, 2.5vw, 1.6rem); font-weight: 700; margin-bottom: 12px; color: var(--grape); }
+.hero-desc { font-size: 1.1rem; max-width: 640px; margin: 0 auto 26px; color: var(--text); }
+.hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero-logo { margin: 0 0 8px; line-height: 1; }
+.hero-logo img { width: min(300px, 72vw); height: auto; margin: 0 auto; display: block; }
+
+/* ---------- פס אמון ---------- */
+.trust { background: var(--ink); color: #fff; padding: 20px 0; }
+.trust-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 40px; text-align: center; }
+.trust-item { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.02rem; }
+.trust-item .ic { font-size: 1.3rem; }
+
+/* ---------- הסיפור ---------- */
+.about { background: var(--cream); }
+.about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 50px; align-items: center; }
+.about-img { position: relative; }
+.about-img img { border-radius: var(--radius); box-shadow: var(--shadow-md); aspect-ratio: 4/3; object-fit: cover; }
+.about-img .tag {
+  position: absolute; bottom: -18px; inset-inline-start: -14px;
+  background: var(--white); padding: 14px 20px; border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md); font-weight: 700; color: var(--ink);
+  display: flex; align-items: center; gap: 10px; font-size: 1.05rem;
+}
+.about p { margin-bottom: 16px; font-size: 1.1rem; }
+.about .signature { color: var(--grape); font-weight: 700; font-family: 'Frank Ruhl Libre', serif; font-size: 1.2rem; }
+
+/* ---------- 3 מסלולים (כרטיסים) ---------- */
+.tracks { background: var(--cream-2); }
+.track-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 46px; }
+.tcard {
+  background: var(--white); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-sm); transition: transform .22s ease, box-shadow .22s ease;
+  display: flex; flex-direction: column;
+}
+.tcard:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.tcard-img { position: relative; aspect-ratio: 16/11; overflow: hidden; }
+.tcard-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.tcard:hover .tcard-img img { transform: scale(1.06); }
+.tcard-emoji {
+  position: absolute; top: 14px; inset-inline-end: 14px; font-size: 1.5rem;
+  background: rgba(255,255,255,.92); width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center; box-shadow: var(--shadow-sm);
+}
+.tcard-body { padding: 26px 24px 28px; display: flex; flex-direction: column; flex: 1; }
+.tcard h3 { font-size: 1.5rem; margin-bottom: 8px; }
+.tcard p { color: var(--text-soft); margin-bottom: 16px; flex: 1; }
+.tcard .price { font-weight: 700; color: var(--berry); font-size: 1.05rem; margin-bottom: 16px; }
+.tcard .price small { color: var(--text-soft); font-weight: 600; }
+
+/* ---------- מסלול מפורט (חלופי תמונה/טקסט) ---------- */
+.detail { border-top: 1px solid rgba(44,42,90,.07); }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.detail:nth-of-type(even) .detail-media { order: 2; }
+.detail-media img { border-radius: var(--radius); box-shadow: var(--shadow-md); aspect-ratio: 5/4; object-fit: cover; width: 100%; }
+.detail h2 { font-size: clamp(1.7rem, 3.5vw, 2.5rem); margin-bottom: 10px; }
+.detail .kicker { color: var(--leaf-deep); font-weight: 700; margin-bottom: 8px; display: block; }
+.detail p.lead { font-size: 1.12rem; margin-bottom: 20px; color: var(--text); }
+.feature-list { list-style: none; display: grid; gap: 11px; margin-bottom: 24px; }
+.feature-list li { display: flex; gap: 11px; align-items: flex-start; font-size: 1.05rem; }
+.feature-list li .fi { color: var(--leaf); font-weight: 800; flex-shrink: 0; margin-top: 2px; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.chip { background: var(--cream-2); color: var(--ink-soft); padding: 6px 14px; border-radius: 100px; font-size: .92rem; font-weight: 600; }
+.price-tag {
+  display: inline-flex; align-items: baseline; gap: 8px;
+  background: var(--cream); border: 2px dashed var(--berry); color: var(--berry-deep);
+  padding: 10px 20px; border-radius: var(--radius-sm); font-weight: 700; margin-bottom: 22px;
+}
+.price-tag b { font-size: 1.5rem; color: var(--berry); }
+.detail-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ---------- גלריה ---------- */
+.gallery { background: var(--cream); }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 14px; margin-top: 40px; }
+.gallery-grid figure { overflow: hidden; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); }
+.gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.gallery-grid figure:hover img { transform: scale(1.08); }
+.g-tall { grid-row: span 2; }
+.g-wide { grid-column: span 2; }
+
+/* ---------- עונתיות ---------- */
+.season { background: linear-gradient(135deg, var(--grape) 0%, var(--grape-deep) 100%); color: #fff; text-align: center; }
+.season h2 { color: #fff; }
+.season .section-lead { color: rgba(255,255,255,.9); }
+.season-badge { display:inline-block; background: var(--gold); color: var(--ink); font-weight:700; padding:6px 18px; border-radius:100px; margin-bottom:14px; }
+
+/* ---------- English (תיירים) ---------- */
+.english { background: var(--ink); color: #fff; direction: ltr; text-align: left; }
+.english h2, .english h3 { color: #fff; }
+.english .section-lead { color: rgba(255,255,255,.85); margin-inline: 0; }
+.eng-list { display: grid; gap: 12px; margin-top: 40px; max-width: 840px; }
+.eng-item { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius-sm); overflow: hidden; transition: border-color .15s; }
+.eng-item[open] { border-color: rgba(217,164,65,.5); }
+.eng-item summary {
+  list-style: none; cursor: pointer; padding: 18px 22px;
+  display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 1.1rem;
+}
+.eng-item summary::-webkit-details-marker { display: none; }
+.eng-item summary::after { content: "+"; color: var(--gold); font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
+.eng-item[open] summary::after { content: "\2212"; }
+.eng-t { display: flex; align-items: center; gap: 10px; }
+.eng-cost { color: var(--gold); font-weight: 700; font-size: .95rem; white-space: nowrap; margin-inline-start: auto; }
+.eng-detail { padding: 0 22px 20px; color: rgba(255,255,255,.82); line-height: 1.65; }
+.eng-detail p { margin-bottom: 8px; }
+.eng-detail ul { margin: 8px 0 0; padding-inline-start: 20px; }
+.eng-detail li { margin-bottom: 5px; }
+.eng-detail em { color: rgba(255,255,255,.72); }
+.english .btn { margin-top: 34px; }
+
+/* ---------- טופס יצירת קשר ---------- */
+.contact { background: var(--cream-2); }
+.contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 46px; align-items: start; }
+.contact-info h2 { margin-bottom: 14px; }
+.contact-info p { font-size: 1.1rem; color: var(--text-soft); margin-bottom: 26px; }
+.info-item { display: flex; gap: 14px; align-items: center; margin-bottom: 18px; }
+.info-item .ii-ic { width: 46px; height: 46px; border-radius: 50%; background: var(--white); display: grid; place-items: center; font-size: 1.3rem; box-shadow: var(--shadow-sm); flex-shrink: 0; }
+.info-item b { color: var(--ink); display: block; }
+.info-item span { color: var(--text-soft); }
+.form-card { background: var(--white); border-radius: var(--radius); padding: 34px; box-shadow: var(--shadow-md); }
+.field { margin-bottom: 18px; }
+.field label { display: block; font-weight: 700; color: var(--ink); margin-bottom: 7px; font-size: .98rem; }
+.field input, .field select, .field textarea {
+  width: 100%; padding: 13px 16px; border: 2px solid #e6dfce; border-radius: var(--radius-sm);
+  font-family: inherit; font-size: 1rem; background: var(--cream); color: var(--text); transition: border-color .15s;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--grape); }
+.field textarea { resize: vertical; min-height: 90px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-note { font-size: .9rem; color: var(--text-soft); margin-top: 14px; text-align: center; }
+
+/* ---------- פוטר ---------- */
+.footer { background: var(--ink); color: rgba(255,255,255,.82); padding: 54px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 34px; margin-bottom: 34px; }
+.footer .brand-name { color: #fff; }
+.footer-logo-img { width: 168px; height: auto; }
+.footer h4 { color: #fff; margin-bottom: 14px; font-family: 'Frank Ruhl Libre', serif; font-size: 1.15rem; }
+.footer a { color: rgba(255,255,255,.8); display: block; margin-bottom: 9px; transition: color .15s; }
+.footer a:hover { color: var(--gold); }
+.footer-desc { font-size: 1rem; line-height: 1.7; margin-top: 12px; max-width: 340px; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.14); padding-top: 22px; text-align: center; font-size: .92rem; color: rgba(255,255,255,.6); }
+
+/* ---------- WhatsApp צף ---------- */
+.wa-float {
+  position: fixed; bottom: 22px; inset-inline-start: 22px; z-index: 90;
+  width: 60px; height: 60px; border-radius: 50%; background: var(--whatsapp);
+  display: grid; place-items: center; color: #fff; font-size: 1.9rem;
+  box-shadow: 0 8px 24px rgba(37,211,102,.5); transition: transform .2s;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%;
+  border: 2px solid var(--whatsapp); animation: pulse 2s infinite; opacity: 0;
+}
+@keyframes pulse { 0%{ transform: scale(1); opacity:.7;} 100%{ transform: scale(1.5); opacity:0;} }
+
+/* ---------- אייקון וואטסאפ ---------- */
+.wa-ic { width: 1.15em; height: 1.15em; display: inline-block; vertical-align: -0.18em; flex-shrink: 0; }
+.wa-float .wa-ic { width: 32px; height: 32px; }
+.ii-wa { color: var(--whatsapp); }
+
+/* ---------- הערה רכה ---------- */
+.soft-note {
+  background: var(--cream-2); border-inline-start: 4px solid var(--leaf);
+  padding: 12px 16px; border-radius: 12px; color: var(--ink-soft);
+  font-size: 1rem; margin-bottom: 22px;
+}
+.detail:nth-of-type(even) .soft-note { background: var(--white); }
+
+/* ---------- קישורי מידע ליציאת קשר ---------- */
+.info-link { text-decoration: none; color: inherit; border-radius: 14px; transition: transform .15s; }
+.info-link:hover { transform: translateX(-4px); }
+.info-link:hover .ii-ic { box-shadow: var(--shadow-md); }
+
+/* ---------- וידאו + כותרות גלריה ---------- */
+.gallery-video {
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md);
+  margin: 8px auto 30px; max-width: 420px; background: #000;
+}
+.gallery-video video { width: 100%; display: block; aspect-ratio: 9/16; object-fit: cover; }
+.gallery-heading {
+  font-family: 'Frank Ruhl Libre', serif; font-size: 1.5rem; color: var(--ink);
+  margin: 34px 0 16px; display: flex; align-items: center; gap: 8px;
+}
+.gallery-heading:first-of-type { margin-top: 0; }
+.gallery .gallery-grid { margin-top: 0; margin-bottom: 8px; }
+
+/* ---------- אזור עונתיות — כפתורים ---------- */
+.season-actions { margin-top: 26px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- רספונסיביות ---------- */
+@media (max-width: 1040px) {
+  .track-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 940px) {
+  .about-grid, .detail-grid, .contact-grid { grid-template-columns: 1fr; gap: 34px; }
+  .detail:nth-of-type(even) .detail-media { order: 0; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
+}
+@media (max-width: 560px) {
+  .track-cards { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column; position: absolute; top: 72px; inset-inline: 0;
+    background: var(--cream); padding: 18px 22px; gap: 16px; box-shadow: var(--shadow-md); align-items: flex-start;
+  }
+  .nav-toggle { display: block; }
+  .nav-cta .btn:not(.nav-toggle) { display: none; }
+  .section { padding: 62px 0; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero { min-height: 88vh; }
+}
