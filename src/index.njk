@@ -1,0 +1,318 @@
+---
+permalink: /index.html
+---
+{%- set waSvg %}<svg class="wa-ic" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.004 0h-.008C7.174 0 .001 7.174.001 16c0 3.5 1.13 6.744 3.05 9.377L1.06 31.94l6.77-2.164A15.9 15.9 0 0 0 16.004 32C24.83 32 32 24.826 32 16S24.83 0 16.004 0zm9.318 22.594c-.386 1.09-1.92 1.994-3.142 2.258-.836.178-1.928.32-5.604-1.204-4.7-1.948-7.726-6.724-7.962-7.034-.226-.31-1.9-2.53-1.9-4.826 0-2.296 1.204-3.426 1.632-3.894.352-.386.94-.562 1.504-.562.182 0 .346.01.494.017.432.018.65.044.936.726.356.852 1.214 2.94 1.318 3.152.106.212.176.46.034.744-.132.284-.198.46-.396.708-.198.248-.418.554-.598.744-.198.21-.404.438-.174.834.23.396 1.022 1.686 2.196 2.73 1.516 1.348 2.796 1.766 3.24 1.964.33.148.712.116.976-.176.334-.37.744-.984 1.164-1.592.296-.43.67-.484 1.062-.336.4.14 2.53 1.194 2.966 1.41.436.216.726.32.834.5.106.18.106 1.032-.28 2.122z"/></svg>{% endset -%}
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ siteContent.site.title }}</title>
+  <meta name="description" content="{{ siteContent.site.description }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Frank+Ruhl+Libre:wght@500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ניווט -->
+  <nav class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="#hero" class="brand">
+        <img class="brand-mark" src="assets/images/logo-mark.png" alt="" />
+        <span class="brand-name">{{ siteContent.site.brandName }}</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        {%- for link in siteContent.nav.links %}
+        <a href="{{ link.href }}">{{ link.label }}</a>
+        {%- endfor %}
+      </div>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">{{ siteContent.nav.cta }}</a>
+        <button class="nav-toggle" id="navToggle" aria-label="תפריט">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero (בהיר, ללא הצללה כהה) -->
+  <header class="hero" id="hero">
+    <div class="hero-bg"><img src="{{ siteContent.hero.bgImage }}" alt="{{ siteContent.hero.bgAlt }}" /></div>
+    <div class="wrap hero-content">
+      <div class="hero-panel">
+        <span class="hero-badge">{{ siteContent.hero.badge }}</span>
+        <h1 class="hero-logo"><img src="{{ siteContent.hero.logo }}" alt="{{ siteContent.site.brandName }}" /></h1>
+        <p class="hero-sub">{{ siteContent.hero.sub }}</p>
+        <p class="hero-desc">{{ siteContent.hero.desc }}</p>
+        <div class="hero-actions">
+          <a href="{{ siteContent.hero.ctaPrimary.href }}" class="btn btn-primary btn-lg">{{ siteContent.hero.ctaPrimary.label }}</a>
+          <a href="{{ siteContent.hero.ctaSecondary.href }}" class="btn btn-ghost btn-lg">{{ siteContent.hero.ctaSecondary.label }}</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- פס אמון -->
+  <div class="trust" id="trust">
+    <div class="wrap trust-inner">
+      {%- for item in siteContent.trust %}
+      <div class="trust-item"><span class="ic">{{ item.icon }}</span> {{ item.text }}</div>
+      {%- endfor %}
+    </div>
+  </div>
+
+  <!-- הסיפור -->
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <span class="eyebrow">{{ siteContent.about.eyebrow }}</span>
+        <h2 class="section-title">{{ siteContent.about.title }}</h2>
+        {{ siteContent.about.body | md | safe }}
+        <p class="signature">{{ siteContent.about.signature }}</p>
+      </div>
+      <div class="about-img">
+        <img src="{{ siteContent.about.image }}" alt="{{ siteContent.about.imageAlt }}" />
+        <div class="tag">{{ siteContent.about.imageTag }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 חוויות -->
+  <section class="section tracks" id="tracks">
+    <div class="wrap center">
+      <span class="eyebrow">{{ siteContent.tracks.eyebrow }}</span>
+      <h2 class="section-title">{{ siteContent.tracks.title }}</h2>
+      <p class="section-lead">{{ siteContent.tracks.lead }}</p>
+
+      <div class="track-cards">
+        {%- for card in siteContent.tracks.cards %}
+        <article class="tcard">
+          <div class="tcard-img">
+            <img src="{{ card.image }}" alt="{{ card.alt }}" />
+            <span class="tcard-emoji">{{ card.emoji }}</span>
+          </div>
+          <div class="tcard-body">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.text }}</p>
+            <div class="price">{{ card.priceMain }} <small>{{ card.priceUnit }}</small></div>
+            <a href="{{ card.href }}" class="btn btn-grape">לפרטים</a>
+          </div>
+        </article>
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- מסלולים -->
+  {%- for d in siteContent.details %}
+  <section class="section detail" id="{{ d.id }}"{% if d.altBg %} style="background:var(--cream);"{% endif %}>
+    <div class="wrap detail-grid">
+      <div class="detail-media">
+        <img src="{{ d.image }}" alt="{{ d.alt }}" />
+      </div>
+      <div class="detail-content">
+        <span class="kicker">{{ d.kicker }}</span>
+        <h2>{{ d.title }}</h2>
+        <p class="lead">{{ d.lead }}</p>
+        <ul class="feature-list">
+          {%- for f in d.features %}
+          <li><span class="fi">✔</span> <span>{{ f | mdInline | safe }}</span></li>
+          {%- endfor %}
+        </ul>
+        {%- if d.chips and d.chips.length %}
+        <div class="chip-row">
+          {%- for c in d.chips %}
+          <span class="chip">{{ c }}</span>
+          {%- endfor %}
+        </div>
+        {%- endif %}
+        {%- if d.softNote %}
+        <p class="soft-note">{{ d.softNote }}</p>
+        {%- endif %}
+        {%- if d.priceTag and d.priceTag.amount %}
+        <div class="price-tag">{{ d.priceTag.prefix }}<b>{{ d.priceTag.amount }}</b>{{ d.priceTag.suffix }}</div>
+        {%- endif %}
+        <div class="detail-actions">
+          {%- for a in d.actions %}
+          <a href="{{ a.href }}" class="btn {% if a.style == 'primary' %}btn-primary{% else %}btn-ghost{% endif %}">{{ a.label }}</a>
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {%- endfor %}
+
+  <!-- גלריה לפי נושאים -->
+  <section class="section gallery" id="gallery">
+    <div class="wrap center">
+      <span class="eyebrow">{{ siteContent.gallery.eyebrow }}</span>
+      <h2 class="section-title">{{ siteContent.gallery.title }}</h2>
+      <p class="section-lead">{{ siteContent.gallery.lead }}</p>
+    </div>
+
+    <div class="wrap">
+      <!-- וידאו -->
+      <div class="gallery-video">
+        <video src="{{ siteContent.gallery.video }}" poster="{{ siteContent.gallery.poster }}" controls playsinline muted loop preload="metadata"></video>
+      </div>
+
+      {%- for group in siteContent.gallery.groups %}
+      <h3 class="gallery-heading">{{ group.heading }}</h3>
+      <div class="gallery-grid">
+        {%- for img in group.images %}
+        <figure{% if img.size == 'wide' %} class="g-wide"{% elif img.size == 'tall' %} class="g-tall"{% endif %}><img src="{{ img.src }}" alt="{{ img.alt }}" /></figure>
+        {%- endfor %}
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+
+  <!-- עונתיות -->
+  <section class="section season" id="season">
+    <div class="wrap center">
+      <span class="season-badge">{{ siteContent.season.badge }}</span>
+      <h2 class="section-title">{{ siteContent.season.title }}</h2>
+      <p class="section-lead">{{ siteContent.season.lead }}</p>
+      <div class="season-actions">
+        <a href="{{ siteContent.season.ctaPrimary.href }}" class="btn btn-primary btn-lg">{{ siteContent.season.ctaPrimary.label }}</a>
+        <a href="{{ siteContent.site.whatsappGroupUrl }}" target="_blank" rel="noopener" class="btn btn-wa btn-lg">{{ waSvg | safe }} {{ siteContent.season.waLabel }}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- English — Tourists (משבצות נפתחות) -->
+  <section class="section english" id="english">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--gold);">{{ siteContent.english.eyebrow }}</span>
+      <h2 class="section-title">{{ siteContent.english.title }}</h2>
+      <p class="section-lead">{{ siteContent.english.lead }}</p>
+
+      <div class="eng-list">
+        {%- for item in siteContent.english.items %}
+        <details class="eng-item">
+          <summary><span class="eng-t">{{ item.title }}</span><span class="eng-cost">{{ item.cost }}</span></summary>
+          <div class="eng-detail">
+            {{ item.body | md | safe }}
+            {%- if item.list and item.list.length %}
+            <ul>
+              {%- for li in item.list %}
+              <li>{{ li | mdInline | safe }}</li>
+              {%- endfor %}
+            </ul>
+            {%- endif %}
+          </div>
+        </details>
+        {%- endfor %}
+      </div>
+
+      <a href="{{ siteContent.english.waHref }}" target="_blank" rel="noopener" class="btn btn-wa btn-lg">{{ waSvg | safe }} {{ siteContent.english.waLabel }}</a>
+    </div>
+  </section>
+
+  <!-- יצירת קשר -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">{{ siteContent.contact.eyebrow }}</span>
+        <h2 class="section-title">{{ siteContent.contact.title }}</h2>
+        <p>{{ siteContent.contact.text }}</p>
+        <div class="info-item">
+          <span class="ii-ic">📞</span>
+          <span><b>{{ siteContent.site.phoneName }}</b><span>{{ siteContent.site.phoneDisplay }}</span></span>
+        </div>
+        <a class="info-item info-link" href="https://wa.me/{{ siteContent.site.whatsappNumber }}" target="_blank" rel="noopener">
+          <span class="ii-ic ii-wa">{{ waSvg | safe }}</span>
+          <span><b>{{ siteContent.contact.waTitle }}</b><span>{{ siteContent.contact.waSub }}</span></span>
+        </a>
+        <a class="info-item info-link" href="{{ siteContent.site.wazeUrl }}" target="_blank" rel="noopener">
+          <span class="ii-ic">📍</span>
+          <span><b>{{ siteContent.contact.wazeTitle }}</b><span>{{ siteContent.contact.wazeSub }}</span></span>
+        </a>
+        <a class="info-item info-link" href="{{ siteContent.site.whatsappGroupUrl }}" target="_blank" rel="noopener">
+          <span class="ii-ic">🔔</span>
+          <span><b>{{ siteContent.contact.groupTitle }}</b><span>{{ siteContent.contact.groupSub }}</span></span>
+        </a>
+      </div>
+
+      <form class="form-card" id="leadForm" data-wa="{{ siteContent.site.whatsappNumber }}">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">שם מלא</label>
+            <input type="text" id="name" name="name" placeholder="השם שלכם" required />
+          </div>
+          <div class="field">
+            <label for="phone">טלפון</label>
+            <input type="tel" id="phone" name="phone" placeholder="05X-XXXXXXX" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="topic">מה מעניין אתכם?</label>
+          <select id="topic" name="topic" required>
+            <option value="" disabled selected>בחרו פעילות…</option>
+            <option value="בציר עצמי">🍇 בציר עצמי — מהבציר לבקבוק</option>
+            <option value="חוויה חקלאית / הדרכה">🌿 חוויה חקלאית / הדרכה</option>
+            <option value="פעילות לגן / בית ספר">🎒 פעילות לגן / בית ספר</option>
+            <option value="בר / בת מצווה">✡️ תוכנית בר / בת מצווה</option>
+            <option value="אירוע בבוסתן">🎉 אירוע בבוסתן</option>
+            <option value="נופש משפחתי">🏡 נופש משפחתי / יום כיף</option>
+            <option value="ביקור תיירים">🌍 ביקור תיירים</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="adults">כמות מבוגרים</label>
+            <input type="number" id="adults" name="adults" min="0" placeholder="לדוגמה: 4" />
+          </div>
+          <div class="field">
+            <label for="kids">כמות ילדים</label>
+            <input type="number" id="kids" name="kids" min="0" placeholder="לדוגמה: 3" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="date">תאריך מבוקש (לא חובה)</label>
+          <input type="date" id="date" name="date" />
+        </div>
+        <div class="field">
+          <label for="msg">הערות</label>
+          <textarea id="msg" name="msg" placeholder="ספרו לנו עוד…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-wa btn-lg" style="width:100%;justify-content:center;">{{ waSvg | safe }} שליחה בוואטסאפ</button>
+        <p class="form-note">בלחיצה על שליחה ייפתח וואטסאפ עם ההודעה מוכנה לאורית.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- פוטר -->
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a href="#hero" class="brand">
+          <img class="footer-logo-img" src="{{ siteContent.footer.logo }}" alt="{{ siteContent.site.brandName }}" />
+        </a>
+        <p class="footer-desc">{{ siteContent.footer.desc }}</p>
+      </div>
+      <div>
+        <h4>{{ siteContent.footer.offersTitle }}</h4>
+        {%- for offer in siteContent.footer.offers %}
+        <a href="{{ offer.href }}">{{ offer.label }}</a>
+        {%- endfor %}
+      </div>
+      <div>
+        <h4>{{ siteContent.footer.contactTitle }}</h4>
+        <a href="tel:{{ siteContent.site.phoneTel }}">📞 {{ siteContent.site.phoneName }} · {{ siteContent.site.phoneDisplay }}</a>
+        <a href="https://wa.me/{{ siteContent.site.whatsappNumber }}" target="_blank" rel="noopener">וואטסאפ</a>
+        <a href="{{ siteContent.site.whatsappGroupUrl }}" target="_blank" rel="noopener">🔔 קבוצת עדכונים</a>
+        <a href="{{ siteContent.site.wazeUrl }}" target="_blank" rel="noopener">📍 ניווט ב־Waze</a>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      © <span id="year"></span> {{ siteContent.footer.copyright }}
+    </div>
+  </footer>
+
+  <!-- WhatsApp צף -->
+  <a href="https://wa.me/{{ siteContent.site.whatsappNumber }}?text=%D7%94%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20%D7%91%D7%99%D7%9B%D7%95%D7%A8%D7%99%20%D7%A9%D7%99%D7%9C%D7%94" class="wa-float" target="_blank" rel="noopener" aria-label="וואטסאפ">{{ waSvg | safe }}</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

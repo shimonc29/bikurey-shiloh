@@ -1,0 +1,307 @@
+{
+  "site": {
+    "title": "ביכורי שילה — בציר, חוויה חקלאית, אירועים ונופש משפחתי בבוסתן",
+    "description": "ביכורי שילה — משק רפפורט בלב נחל שילה. בציר עצמי והכנת מיץ ענבים 'מהבציר לבקבוק', חוויה חקלאית והדרכה לקבוצות, השכרת בוסתן קסום לאירועים ולנופש משפחתי. בין ירושלים לתל אביב.",
+    "brandName": "ביכורי שילה",
+    "whatsappNumber": "972525666687",
+    "phoneName": "אורית",
+    "phoneDisplay": "052-5666687",
+    "phoneTel": "0525666687",
+    "whatsappGroupUrl": "https://chat.whatsapp.com/KkTB1jXDMlxBeYhBDV0NXr",
+    "wazeUrl": "https://waze.com/ul?q=%D7%91%D7%99%D7%9B%D7%95%D7%A8%D7%99%20%D7%A9%D7%99%D7%9C%D7%94&navigate=yes"
+  },
+  "nav": {
+    "cta": "לפרטים והרשמה",
+    "links": [
+      { "label": "הסיפור", "href": "#about" },
+      { "label": "בציר", "href": "#bazir" },
+      { "label": "חוויה חקלאית", "href": "#agri" },
+      { "label": "אירועים", "href": "#event" },
+      { "label": "נופש משפחתי", "href": "#family" },
+      { "label": "גלריה", "href": "#gallery" },
+      { "label": "English", "href": "#english" },
+      { "label": "צור קשר", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "bgImage": "assets/images/hero-aerial.jpg",
+    "bgAlt": "מבט על חוות ביכורי שילה, הכרמים והבוסתנים בנחל שילה",
+    "logo": "assets/images/logo.png",
+    "badge": "🌿 משק רפפורט · בלב נחל שילה",
+    "sub": "מהבציר לבקבוק — וחוויות טבע לכל המשפחה",
+    "desc": "בוסתן פסטורלי מוקף כרמים, בוסתנים ומטעי זיתים, בין ירושלים לתל אביב. בציר עצמי, חוויה חקלאית, אירועים בלב הטבע ונופש משפחתי בלתי נשכח.",
+    "ctaPrimary": { "label": "גלו את ההצעות שלנו", "href": "#tracks" },
+    "ctaSecondary": { "label": "דברו איתנו", "href": "#contact" }
+  },
+  "trust": [
+    { "icon": "🍇", "text": "בציר עצמי — מהבציר לבקבוק" },
+    { "icon": "🌳", "text": "בוסתן קסום לאירועים" },
+    { "icon": "🚜", "text": "חוויה חקלאית והדרכה" },
+    { "icon": "📍", "text": "נחל שילה — מרכז הארץ" }
+  ],
+  "about": {
+    "eyebrow": "הסיפור שלנו",
+    "title": "אהבה לארץ, שנטועה באדמה",
+    "body": "סבא **עירא רפפורט** חקלאי כבר קרוב ל־30 שנה. את הכרמים הראשונים באזור שילה הוא נטע מתוך אהבה גדולה לארץ ולאדמה, ומאז לא הפסיק לגדל מכל טוב הארץ — כל פרי בעונתו.\n\nלסבא עירא הצטרפו סבתא **אורית**, הילדים והנכדים. כולם יחד משקיעים המון כדי שאתם תוכלו ליהנות מברכת האדמה — בבציר, בבוסתן, ובכל חוויה שאנחנו מזמינים אליה.\n\nהמשק שייך לאוצר בית דין ושומר שמיטה — ונשמח לספר לכם עוד על כך בביקורכם.",
+    "signature": "משפחת רפפורט · ביכורי שילה 🍇",
+    "image": "assets/images/story-era.jpg",
+    "imageAlt": "עירא רפפורט מספר על הכרמים והמקום מול נוף שילה",
+    "imageTag": "👨‍🌾 עירא רפפורט · חלוץ הכרמים בשילה"
+  },
+  "tracks": {
+    "eyebrow": "ארבע דרכים ליהנות מהמקום",
+    "title": "מה תרצו לחוות?",
+    "lead": "בין אם באתם לבצור ענבים, לחוויה חקלאית, לחגוג שמחה או לבלות בטבע — יש כאן בדיוק בשבילכם.",
+    "cards": [
+      {
+        "image": "assets/images/bazir-vineyard.jpg",
+        "alt": "כרמי ביכורי שילה — בציר עצמי",
+        "emoji": "🍇",
+        "title": "בציר — מהבציר לבקבוק",
+        "text": "קטפו ענבים בכרמי שילה והכינו בקבוק מיץ ענבים טרי משלכם. חוויה משפחתית מתוקה לכל הגילאים.",
+        "priceMain": "החל מ־45₪",
+        "priceUnit": "לאדם",
+        "href": "#bazir"
+      },
+      {
+        "image": "assets/images/agri-tractor.jpg",
+        "alt": "סיור טרקטור בחוויה החקלאית",
+        "emoji": "🌿",
+        "title": "חוויה חקלאית והדרכה",
+        "text": "סיורי טרקטור, פיתות על הסאג', מפגש עם עירא ומפגשי תוכן לקבוצות. לגנים, בתי ספר, קבוצות ותיירים.",
+        "priceMain": "בהתאמה אישית",
+        "priceUnit": "לקבוצה",
+        "href": "#agri"
+      },
+      {
+        "image": "assets/images/event-buffet.jpg",
+        "alt": "אירוע בבוסתן עם מזנון כפרי",
+        "emoji": "🎉",
+        "title": "אירוע בבוסתן",
+        "text": "בוסתן קסום ומרגיע לבר/בת מצווה, ברית, מפגש משפחתי או שמחה — עם כל הציוד, הריהוט וההגברה.",
+        "priceMain": "החל מ־2,300₪",
+        "priceUnit": "לאירוע",
+        "href": "#event"
+      },
+      {
+        "image": "assets/images/family-hammocks.jpg",
+        "alt": "נופש משפחתי בבוסתן",
+        "emoji": "🏡",
+        "title": "נופש משפחתי",
+        "text": "המתחם כולו שלכם — משחקים, קריוקי, סאג' וטאבון, זולה ובוסתן. יום כיף מושלם למשפחות ולקבוצות.",
+        "priceMain": "החל מ־2,000₪",
+        "priceUnit": "ל־5 שעות",
+        "href": "#family"
+      }
+    ]
+  },
+  "details": [
+    {
+      "id": "bazir",
+      "altBg": false,
+      "image": "assets/images/bazir-vineyard.jpg",
+      "alt": "בציר עצמי בכרמי ביכורי שילה",
+      "kicker": "🍇 בציר עצמי · מהבציר לבקבוק",
+      "title": "מהבציר לבקבוק — חוויה מתוקה לכל המשפחה",
+      "lead": "קטפו את הענבים שלכם בכרמי שילה, והכינו בקבוק מיץ ענבים טרי משלכם במכשיר מיוחד — מוקפים בנוף המקראי עוצר הנשימה.",
+      "features": [
+        "**בציר ענבים עצמי** בכרמי ביכורי שילה",
+        "**הכנת בקבוק מיץ ענבים טרי** במכשיר מיוחד",
+        "**הפרשת תרומות ומעשרות** בעצמכם — חוויה של ממש",
+        "כיף לכל המשפחה, **מגיל 3 ומעלה**"
+      ],
+      "chips": ["משפחות", "קבוצות", "כל הגילאים"],
+      "softNote": "",
+      "priceTag": { "prefix": "בציר עצמי החל מ־", "amount": "45₪", "suffix": " לאדם (מגיל 3)" },
+      "actions": [
+        { "label": "להרשמה לבציר", "href": "#contact", "style": "primary" },
+        { "label": "מתי עונת הבציר?", "href": "#season", "style": "ghost" }
+      ]
+    },
+    {
+      "id": "agri",
+      "altBg": true,
+      "image": "assets/images/agri-tractor.jpg",
+      "alt": "סיור טרקטור עם ילדים בחווה החקלאית",
+      "kicker": "🌿 חוויה חקלאית והדרכה",
+      "title": "לגעת באדמה, להתחבר לשורשים",
+      "lead": "חוויה אותנטית בלב חבל בנימין — למשפחות, גני ילדים, בתי ספר, קבוצות ותוכניות בר/בת מצווה.",
+      "features": [
+        "**סיור טרקטור ועגלה** בין הכרמים אל בור מים עתיק",
+        "**הכנת פיתות על הסאג'** — טעם של פעם, ישר מהאש",
+        "**מפגש עם עירא רפפורט** וסיפור נטיעת הכרמים הראשונים בשומרון",
+        "**מפגשי תוכן לקבוצות** בהתאמה אישית"
+      ],
+      "chips": ["גנים ובתי ספר", "ימי גיבוש לקבוצות", "בר/בת מצווה", "תיירים"],
+      "softNote": "✨ התוכן והמחיר נבנים יחד אתכם, בהתאמה לגודל הקבוצה ולאופי הביקור.",
+      "priceTag": null,
+      "actions": [
+        { "label": "לתיאום וקבלת הצעה", "href": "#contact", "style": "primary" }
+      ]
+    },
+    {
+      "id": "event",
+      "altBg": false,
+      "image": "assets/images/event-buffet.jpg",
+      "alt": "אירוע בבוסתן עם מזנון כפרי ורקע כרמים",
+      "kicker": "🎉 השכרת המתחם לאירועים",
+      "title": "לחגוג בלב בוסתן קסום",
+      "lead": "אווירה מיוחדת ומרגיעה תחת עצי הזית — לבר ובת מצווה, בריתות, מסיבות ומפגשים משפחתיים.",
+      "features": [
+        "שימוש בבוסתן הקסום ובמבנה השירותים",
+        "**11 שולחנות עגולים · 6 שולחנות קק\"ל · 150 כיסאות**",
+        "3 שולחנות מזנון · 3 עגלות כפריות · 5 פלטות חימום",
+        "מיחם מים חמים · מקרר · פריזר",
+        "ציוד להקרנה ומגבר — והכי חשוב: אווירה מיוחדת ומרגיעה 😇"
+      ],
+      "chips": ["כולל סידור ופירוק שולחנות וכסאות", "בר/בת מצווה", "בריתות ומפגשים"],
+      "softNote": "",
+      "priceTag": { "prefix": "החל מ־", "amount": "2,300₪", "suffix": " לאירוע" },
+      "actions": [
+        { "label": "לבדיקת תאריך פנוי", "href": "#contact", "style": "primary" }
+      ]
+    },
+    {
+      "id": "family",
+      "altBg": true,
+      "image": "assets/images/family-hammocks.jpg",
+      "alt": "בילוי ומנוחה בבוסתן בנופש משפחתי",
+      "kicker": "🏡 השכרת המתחם לבילוי",
+      "title": "יום כיף שכולו שלכם",
+      "lead": "המתחם הקסום כולו לרשותכם — משפחה, חברים או קבוצה — עם מגוון משחקים, אטרקציות וציוד.",
+      "features": [
+        "מתחם, שירותים, בוסתן, חניה, שולחנות וכסאות ופינת זולה",
+        "משחקים פעילים: כדורגל שולחן, סנוקר, פינג פונג, הוקי ועמדת כדורסל",
+        "סאג' להכנת פיתות · טאבון להכנת פיצות · מחצלות",
+        "**קריוקי** — כלול בחוויה!"
+      ],
+      "chips": [],
+      "softNote": "✨ ניתן להוסיף גם: מתנפחים, וופל בלגי, צ'יפסר, קרפ, פופקורן ומכונת נקניקיות.",
+      "priceTag": { "prefix": "החל מ־", "amount": "2,000₪", "suffix": " ל־5 שעות" },
+      "actions": [
+        { "label": "להזמנת יום כיף", "href": "#contact", "style": "primary" }
+      ]
+    }
+  ],
+  "gallery": {
+    "eyebrow": "רגעים מהמקום",
+    "title": "גלריה",
+    "lead": "הצצה לחוויות שלנו — בציר, נופש משפחתי ואירועים בבוסתן.",
+    "video": "assets/gallery-video-1.mp4",
+    "poster": "assets/images/video-poster.jpg",
+    "groups": [
+      {
+        "heading": "🍇 בציר",
+        "images": [
+          { "src": "assets/images/bazir-vineyard.jpg", "alt": "כרמי שילה", "size": "wide" },
+          { "src": "assets/images/story-era-portrait.jpg", "alt": "עירא בכרמים", "size": "" },
+          { "src": "assets/images/hero-aerial.jpg", "alt": "מבט על הכרמים", "size": "" }
+        ]
+      },
+      {
+        "heading": "🏡 חוויה משפחתית",
+        "images": [
+          { "src": "assets/images/family-hammocks.jpg", "alt": "המאקים בבוסתן", "size": "tall" },
+          { "src": "assets/images/family-foosball.jpg", "alt": "משחקי שולחן", "size": "" },
+          { "src": "assets/images/family-pita.jpg", "alt": "הכנת פיתות", "size": "" },
+          { "src": "assets/images/agri-tractor.jpg", "alt": "סיור טרקטור", "size": "" },
+          { "src": "assets/images/games-collage.jpg", "alt": "פעילויות ומשחקים", "size": "" }
+        ]
+      },
+      {
+        "heading": "🎉 אירועים בבוסתן",
+        "images": [
+          { "src": "assets/images/event-buffet.jpg", "alt": "מזנון אירוע", "size": "wide" },
+          { "src": "assets/images/event-flowers.jpg", "alt": "עריכת שולחן פסטורלית", "size": "" },
+          { "src": "assets/images/event-bbq.jpg", "alt": "על האש בבוסתן", "size": "" },
+          { "src": "assets/images/event-group.jpg", "alt": "מפגש בבוסתן", "size": "" }
+        ]
+      }
+    ]
+  },
+  "season": {
+    "badge": "🍇 עונת הבציר 2026",
+    "title": "בציר עצמי — מאמצע אב ועד סוכות",
+    "lead": "פעילות הבציר והכנת מיץ הענבים נפתחת באמצע אוגוסט (המועד המדויק יתעדכן) ונמשכת עד סוף ספטמבר, כולל חג הסוכות. האירועים והנופש המשפחתי זמינים לאורך הקיץ.",
+    "ctaPrimary": { "label": "שריון מקום לבציר", "href": "#contact" },
+    "waLabel": "הצטרפו לעדכונים בוואטסאפ"
+  },
+  "english": {
+    "eyebrow": "For Tourists & Visitors",
+    "title": "A Private Visit to Bikurei Shiloh Farm",
+    "lead": "A magical journey among the vineyards of Shiloh — history, beauty and deep roots, in the heart of the biblical landscape. Guided by Era Rapaport. Click each option to see details.",
+    "items": [
+      {
+        "title": "🌳 Tree Planting Package",
+        "cost": "$300 first tree",
+        "body": "Plant a fruit tree — a meaningful mitzvah and an unforgettable experience. Includes a Mini-Golf cart or Ranger ride to the orchard (for small groups of 6–8), and a unique guided tour through the vineyard rows to an ancient water cistern.",
+        "list": [
+          "$300 for the first tree · $150 for each additional tree",
+          "Tree planting & ride are offered together as one package",
+          "Professional guidance by Era"
+        ]
+      },
+      {
+        "title": "🚜 Tractor & Wagon Tour",
+        "cost": "$250 / group",
+        "body": "A guided ride through the vineyards to an ancient water cistern — a journey of history, beauty and deep roots.",
+        "list": ["Minimum 10, maximum 20 people", "$250 for the group"]
+      },
+      {
+        "title": "🫓 Pita on a Saje",
+        "cost": "$160 / group",
+        "body": "Bake your own fresh pita over an open fire — a hands-on taste of tradition.",
+        "list": ["Up to 20 people", "$160 for the group"]
+      },
+      {
+        "title": "👨‍🌾 Meet Era Rapaport",
+        "cost": "$100",
+        "body": "Hear his amazing stories about founding Shiloh, planting the first vineyards in the Shomron, and keeping Shmita.",
+        "list": []
+      },
+      {
+        "title": "🐑 Experiential Farm Visit",
+        "cost": "$150 / group",
+        "body": "A hands-on visit to a nearby farm (10 minutes from Bikurei Shiloh):",
+        "list": [
+          "Hands-on visit to a sheep pen",
+          "Learn about the inspiring Farm Movement in Judea & Samaria",
+          "A breathtaking view of the Jordan Valley"
+        ]
+      },
+      {
+        "title": "🍇 Grape Picking Experience",
+        "cost": "$25 / person",
+        "body": "Pick your own grapes and make your very own bottle of fresh grape juice. Perform terumot & ma'asrot yourself, surrounded by the breathtaking biblical landscape. Fun for all ages (3+).\n\n*Season: mid-August through the end of September, including Sukkot.*",
+        "list": []
+      }
+    ],
+    "waLabel": "Contact us on WhatsApp",
+    "waHref": "https://wa.me/972525666687?text=Hi%20Orit%2C%20I'm%20interested%20in%20a%20visit%20to%20Bikurei%20Shiloh%20Farm"
+  },
+  "contact": {
+    "eyebrow": "בואו נדבר",
+    "title": "מוזמנים ליצור קשר",
+    "text": "ספרו לנו מה מעניין אתכם ונחזור אליכם עם כל הפרטים. אפשר גם פשוט להתקשר או לשלוח וואטסאפ 😊",
+    "waTitle": "וואטסאפ",
+    "waSub": "לשיחה מהירה",
+    "wazeTitle": "ניווט ב־Waze",
+    "wazeSub": "ביכורי שילה — נחל שילה, בין ירושלים לתל אביב",
+    "groupTitle": "קבוצת עדכונים שקטה",
+    "groupSub": "מתי יש בציר ופעילויות"
+  },
+  "footer": {
+    "logo": "assets/images/logo-white.png",
+    "desc": "משק רפפורט — בציר, חוויה חקלאית, אירועים ונופש משפחתי בלב נחל שילה. מהבציר לבקבוק, ומהאדמה אל הלב.",
+    "offersTitle": "ההצעות שלנו",
+    "offers": [
+      { "label": "בציר — מהבציר לבקבוק", "href": "#bazir" },
+      { "label": "חוויה חקלאית", "href": "#agri" },
+      { "label": "אירוע בבוסתן", "href": "#event" },
+      { "label": "נופש משפחתי", "href": "#family" },
+      { "label": "For Tourists", "href": "#english" }
+    ],
+    "contactTitle": "יצירת קשר",
+    "copyright": "ביכורי שילה · משק רפפורט · נחל שילה. כל הזכויות שמורות."
+  }
+}

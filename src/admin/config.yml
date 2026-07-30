@@ -1,0 +1,278 @@
+# ⚙️ הגדרות מערכת הניהול (Sveltia CMS)
+# ------------------------------------------------------------------
+# ⚠️ לפני העלייה לאוויר: החליפו את OWNER/REPO בשם המשתמש והריפו שלכם ב-GitHub
+#    לדוגמה:  repo: shimonc29/bikurey-shiloh
+backend:
+  name: github
+  repo: OWNER/REPO
+  branch: main
+
+# מיקום שמירת תמונות שמועלות דרך הממשק
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "content"
+    label: "תוכן האתר"
+    delete: false
+    files:
+      - name: "main"
+        label: "כל תוכן העמוד"
+        file: "src/_data/siteContent.json"
+        description: "עריכת כל הטקסטים והתמונות באתר. אחרי שמירה — האתר יתעדכן תוך כדקה."
+        fields:
+          # ---------- כללי ----------
+          - label: "כללי (פרטי קשר וקישורים)"
+            name: "site"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "כותרת האתר (לכרטיסייה ולגוגל)", name: "title", widget: "string" }
+              - { label: "תיאור לגוגל", name: "description", widget: "text" }
+              - { label: "שם המותג", name: "brandName", widget: "string" }
+              - { label: "מספר וואטסאפ (פורמט בינלאומי, למשל 972525666687)", name: "whatsappNumber", widget: "string" }
+              - { label: "שם איש קשר", name: "phoneName", widget: "string" }
+              - { label: "טלפון לתצוגה", name: "phoneDisplay", widget: "string" }
+              - { label: "טלפון לחיוג (ספרות בלבד)", name: "phoneTel", widget: "string" }
+              - { label: "קישור לקבוצת וואטסאפ", name: "whatsappGroupUrl", widget: "string" }
+              - { label: "קישור ניווט Waze", name: "wazeUrl", widget: "string" }
+
+          # ---------- תפריט ----------
+          - label: "תפריט עליון"
+            name: "nav"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "כפתור פעולה (CTA)", name: "cta", widget: "string" }
+              - label: "קישורי תפריט"
+                name: "links"
+                widget: "list"
+                fields:
+                  - { label: "טקסט", name: "label", widget: "string" }
+                  - { label: "עוגן (למשל #about)", name: "href", widget: "string" }
+
+          # ---------- עמוד ראשי (Hero) ----------
+          - label: "כותרת ראשית (Hero)"
+            name: "hero"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "תמונת רקע", name: "bgImage", widget: "image" }
+              - { label: "תיאור תמונת רקע (נגישות)", name: "bgAlt", widget: "string" }
+              - { label: "לוגו", name: "logo", widget: "image" }
+              - { label: "תגית עליונה", name: "badge", widget: "string" }
+              - { label: "כותרת משנה", name: "sub", widget: "string" }
+              - { label: "טקסט תיאור", name: "desc", widget: "text" }
+              - label: "כפתור ראשי"
+                name: "ctaPrimary"
+                widget: "object"
+                fields:
+                  - { label: "טקסט", name: "label", widget: "string" }
+                  - { label: "קישור", name: "href", widget: "string" }
+              - label: "כפתור משני"
+                name: "ctaSecondary"
+                widget: "object"
+                fields:
+                  - { label: "טקסט", name: "label", widget: "string" }
+                  - { label: "קישור", name: "href", widget: "string" }
+
+          # ---------- פס אמון ----------
+          - label: "פס יתרונות (מתחת ל-Hero)"
+            name: "trust"
+            widget: "list"
+            collapsed: true
+            fields:
+              - { label: "אימוג'י", name: "icon", widget: "string" }
+              - { label: "טקסט", name: "text", widget: "string" }
+
+          # ---------- הסיפור ----------
+          - label: "הסיפור שלנו"
+            name: "about"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "כותרת עליונה", name: "eyebrow", widget: "string" }
+              - { label: "כותרת", name: "title", widget: "string" }
+              - { label: "טקסט (אפשר **הדגשה**)", name: "body", widget: "markdown" }
+              - { label: "חתימה", name: "signature", widget: "string" }
+              - { label: "תמונה", name: "image", widget: "image" }
+              - { label: "תיאור תמונה (נגישות)", name: "imageAlt", widget: "string" }
+              - { label: "תווית על התמונה", name: "imageTag", widget: "string" }
+
+          # ---------- ארבע החוויות ----------
+          - label: "ארבע החוויות (כרטיסיות)"
+            name: "tracks"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "כותרת עליונה", name: "eyebrow", widget: "string" }
+              - { label: "כותרת", name: "title", widget: "string" }
+              - { label: "טקסט מוביל", name: "lead", widget: "text" }
+              - label: "כרטיסיות"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - { label: "תמונה", name: "image", widget: "image" }
+                  - { label: "תיאור תמונה (נגישות)", name: "alt", widget: "string" }
+                  - { label: "אימוג'י", name: "emoji", widget: "string" }
+                  - { label: "כותרת", name: "title", widget: "string" }
+                  - { label: "טקסט", name: "text", widget: "text" }
+                  - { label: "מחיר (טקסט ראשי)", name: "priceMain", widget: "string" }
+                  - { label: "יחידת מחיר (למשל לאדם)", name: "priceUnit", widget: "string" }
+                  - { label: "קישור (עוגן)", name: "href", widget: "string" }
+
+          # ---------- מסלולים מפורטים ----------
+          - label: "מסלולים מפורטים (בציר / חקלאי / אירוע / נופש)"
+            name: "details"
+            widget: "list"
+            collapsed: true
+            fields:
+              - { label: "מזהה עוגן (bazir/agri/event/family)", name: "id", widget: "string" }
+              - { label: "רקע שמנת (בהיר)", name: "altBg", widget: "boolean", default: false }
+              - { label: "תמונה", name: "image", widget: "image" }
+              - { label: "תיאור תמונה (נגישות)", name: "alt", widget: "string" }
+              - { label: "תגית עליונה", name: "kicker", widget: "string" }
+              - { label: "כותרת", name: "title", widget: "string" }
+              - { label: "טקסט מוביל", name: "lead", widget: "text" }
+              - label: "רשימת יתרונות (אפשר **הדגשה**)"
+                name: "features"
+                widget: "list"
+                field: { label: "שורה", name: "item", widget: "string" }
+              - label: "תגיות (chips)"
+                name: "chips"
+                widget: "list"
+                required: false
+                field: { label: "תגית", name: "chip", widget: "string" }
+              - { label: "הערה רכה (אפשר להשאיר ריק)", name: "softNote", widget: "text", required: false }
+              - label: "תגית מחיר (אפשר להשאיר ריק)"
+                name: "priceTag"
+                widget: "object"
+                required: false
+                collapsed: true
+                fields:
+                  - { label: "טקסט לפני", name: "prefix", widget: "string", required: false }
+                  - { label: "סכום (למשל 45₪)", name: "amount", widget: "string", required: false }
+                  - { label: "טקסט אחרי", name: "suffix", widget: "string", required: false }
+              - label: "כפתורי פעולה"
+                name: "actions"
+                widget: "list"
+                fields:
+                  - { label: "טקסט", name: "label", widget: "string" }
+                  - { label: "קישור", name: "href", widget: "string" }
+                  - label: "סגנון"
+                    name: "style"
+                    widget: "select"
+                    options:
+                      - { label: "ראשי (מלא)", value: "primary" }
+                      - { label: "משני (מתאר)", value: "ghost" }
+                    default: "primary"
+
+          # ---------- גלריה ----------
+          - label: "גלריה"
+            name: "gallery"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "כותרת עליונה", name: "eyebrow", widget: "string" }
+              - { label: "כותרת", name: "title", widget: "string" }
+              - { label: "טקסט מוביל", name: "lead", widget: "text" }
+              - label: "וידאו"
+                name: "video"
+                widget: "file"
+                media_folder: "src/assets"
+                public_folder: "/assets"
+              - { label: "תמונת פתיחה לוידאו (poster)", name: "poster", widget: "image" }
+              - label: "קבוצות תמונות"
+                name: "groups"
+                widget: "list"
+                fields:
+                  - { label: "כותרת הקבוצה", name: "heading", widget: "string" }
+                  - label: "תמונות"
+                    name: "images"
+                    widget: "list"
+                    fields:
+                      - { label: "תמונה", name: "src", widget: "image" }
+                      - { label: "תיאור (נגישות)", name: "alt", widget: "string" }
+                      - label: "גודל בגלריה"
+                        name: "size"
+                        widget: "select"
+                        options:
+                          - { label: "רגיל", value: "" }
+                          - { label: "רחב", value: "wide" }
+                          - { label: "גבוה", value: "tall" }
+                        required: false
+
+          # ---------- עונתיות ----------
+          - label: "עונת הבציר"
+            name: "season"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "תגית עונה", name: "badge", widget: "string" }
+              - { label: "כותרת", name: "title", widget: "string" }
+              - { label: "טקסט מוביל", name: "lead", widget: "text" }
+              - label: "כפתור ראשי"
+                name: "ctaPrimary"
+                widget: "object"
+                fields:
+                  - { label: "טקסט", name: "label", widget: "string" }
+                  - { label: "קישור", name: "href", widget: "string" }
+              - { label: "טקסט כפתור וואטסאפ", name: "waLabel", widget: "string" }
+
+          # ---------- English ----------
+          - label: "English (לתיירים)"
+            name: "english"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "כותרת עליונה", name: "eyebrow", widget: "string" }
+              - { label: "כותרת", name: "title", widget: "string" }
+              - { label: "טקסט מוביל", name: "lead", widget: "text" }
+              - label: "חבילות (משבצות נפתחות)"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "כותרת", name: "title", widget: "string" }
+                  - { label: "מחיר", name: "cost", widget: "string" }
+                  - { label: "תיאור", name: "body", widget: "markdown" }
+                  - label: "נקודות (רשימה)"
+                    name: "list"
+                    widget: "list"
+                    required: false
+                    field: { label: "שורה", name: "line", widget: "string" }
+              - { label: "טקסט כפתור וואטסאפ", name: "waLabel", widget: "string" }
+              - { label: "קישור וואטסאפ (עם הודעה מוכנה)", name: "waHref", widget: "string" }
+
+          # ---------- יצירת קשר ----------
+          - label: "יצירת קשר"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "כותרת עליונה", name: "eyebrow", widget: "string" }
+              - { label: "כותרת", name: "title", widget: "string" }
+              - { label: "טקסט", name: "text", widget: "text" }
+              - { label: "כותרת וואטסאפ", name: "waTitle", widget: "string" }
+              - { label: "תת-כותרת וואטסאפ", name: "waSub", widget: "string" }
+              - { label: "כותרת Waze", name: "wazeTitle", widget: "string" }
+              - { label: "תת-כותרת Waze", name: "wazeSub", widget: "string" }
+              - { label: "כותרת קבוצת עדכונים", name: "groupTitle", widget: "string" }
+              - { label: "תת-כותרת קבוצת עדכונים", name: "groupSub", widget: "string" }
+
+          # ---------- פוטר ----------
+          - label: "פוטר (תחתית העמוד)"
+            name: "footer"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "לוגו (גרסה בהירה)", name: "logo", widget: "image" }
+              - { label: "טקסט תיאור", name: "desc", widget: "text" }
+              - { label: "כותרת עמודת הצעות", name: "offersTitle", widget: "string" }
+              - label: "קישורי הצעות"
+                name: "offers"
+                widget: "list"
+                fields:
+                  - { label: "טקסט", name: "label", widget: "string" }
+                  - { label: "קישור", name: "href", widget: "string" }
+              - { label: "כותרת עמודת יצירת קשר", name: "contactTitle", widget: "string" }
+              - { label: "שורת זכויות יוצרים", name: "copyright", widget: "string" }

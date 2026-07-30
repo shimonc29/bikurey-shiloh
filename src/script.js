@@ -2,7 +2,10 @@
 (function () {
   'use strict';
 
-  var WHATSAPP_NUMBER = '972525666687'; // אורית — 052-5666687
+  // מספר הוואטסאפ נלקח מהאתר (data-wa על הטופס) כדי להישאר מסונכרן עם הניהול
+  var formEl = document.getElementById('leadForm');
+  var WHATSAPP_NUMBER =
+    (formEl && formEl.getAttribute('data-wa')) || '972525666687';
 
   // שנה נוכחית בפוטר
   var yearEl = document.getElementById('year');
