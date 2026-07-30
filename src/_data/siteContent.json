@@ -13,14 +13,38 @@
   "nav": {
     "cta": "לפרטים והרשמה",
     "links": [
-      { "label": "הסיפור", "href": "#about" },
-      { "label": "בציר", "href": "#bazir" },
-      { "label": "חוויה חקלאית", "href": "#agri" },
-      { "label": "אירועים", "href": "#event" },
-      { "label": "נופש משפחתי", "href": "#family" },
-      { "label": "גלריה", "href": "#gallery" },
-      { "label": "English", "href": "#english" },
-      { "label": "צור קשר", "href": "#contact" }
+      {
+        "label": "הסיפור שלנו",
+        "href": "#about"
+      },
+      {
+        "label": "בציר",
+        "href": "#bazir"
+      },
+      {
+        "label": "חוויה חקלאית",
+        "href": "#agri"
+      },
+      {
+        "label": "אירועים",
+        "href": "#event"
+      },
+      {
+        "label": "נופש משפחתי",
+        "href": "#family"
+      },
+      {
+        "label": "גלריה",
+        "href": "#gallery"
+      },
+      {
+        "label": "English",
+        "href": "#english"
+      },
+      {
+        "label": "צור קשר",
+        "href": "#contact"
+      }
     ]
   },
   "hero": {
@@ -30,14 +54,32 @@
     "badge": "🌿 משק רפפורט · בלב נחל שילה",
     "sub": "מהבציר לבקבוק — וחוויות טבע לכל המשפחה",
     "desc": "בוסתן פסטורלי מוקף כרמים, בוסתנים ומטעי זיתים, בין ירושלים לתל אביב. בציר עצמי, חוויה חקלאית, אירועים בלב הטבע ונופש משפחתי בלתי נשכח.",
-    "ctaPrimary": { "label": "גלו את ההצעות שלנו", "href": "#tracks" },
-    "ctaSecondary": { "label": "דברו איתנו", "href": "#contact" }
+    "ctaPrimary": {
+      "label": "גלו את ההצעות שלנו",
+      "href": "#tracks"
+    },
+    "ctaSecondary": {
+      "label": "דברו איתנו",
+      "href": "#contact"
+    }
   },
   "trust": [
-    { "icon": "🍇", "text": "בציר עצמי — מהבציר לבקבוק" },
-    { "icon": "🌳", "text": "בוסתן קסום לאירועים" },
-    { "icon": "🚜", "text": "חוויה חקלאית והדרכה" },
-    { "icon": "📍", "text": "נחל שילה — מרכז הארץ" }
+    {
+      "icon": "🍇",
+      "text": "בציר עצמי — מהבציר לבקבוק"
+    },
+    {
+      "icon": "🌳",
+      "text": "בוסתן קסום לאירועים"
+    },
+    {
+      "icon": "🚜",
+      "text": "חוויה חקלאית והדרכה"
+    },
+    {
+      "icon": "📍",
+      "text": "נחל שילה — מרכז הארץ"
+    }
   ],
   "about": {
     "eyebrow": "הסיפור שלנו",
@@ -110,12 +152,28 @@
         "**הפרשת תרומות ומעשרות** בעצמכם — חוויה של ממש",
         "כיף לכל המשפחה, **מגיל 3 ומעלה**"
       ],
-      "chips": ["משפחות", "קבוצות", "כל הגילאים"],
+      "chips": [
+        "משפחות",
+        "קבוצות",
+        "כל הגילאים"
+      ],
       "softNote": "",
-      "priceTag": { "prefix": "בציר עצמי החל מ־", "amount": "45₪", "suffix": " לאדם (מגיל 3)" },
+      "priceTag": {
+        "prefix": "בציר עצמי החל מ־",
+        "amount": "45₪",
+        "suffix": "לאדם (מגיל 3)"
+      },
       "actions": [
-        { "label": "להרשמה לבציר", "href": "#contact", "style": "primary" },
-        { "label": "מתי עונת הבציר?", "href": "#season", "style": "ghost" }
+        {
+          "label": "להרשמה לבציר",
+          "href": "#contact",
+          "style": "primary"
+        },
+        {
+          "label": "מתי עונת הבציר?",
+          "href": "#season",
+          "style": "ghost"
+        }
       ]
     },
     {
@@ -132,11 +190,20 @@
         "**מפגש עם עירא רפפורט** וסיפור נטיעת הכרמים הראשונים בשומרון",
         "**מפגשי תוכן לקבוצות** בהתאמה אישית"
       ],
-      "chips": ["גנים ובתי ספר", "ימי גיבוש לקבוצות", "בר/בת מצווה", "תיירים"],
+      "chips": [
+        "גנים ובתי ספר",
+        "ימי גיבוש לקבוצות",
+        "בר/בת מצווה",
+        "תיירים"
+      ],
       "softNote": "✨ התוכן והמחיר נבנים יחד אתכם, בהתאמה לגודל הקבוצה ולאופי הביקור.",
       "priceTag": null,
       "actions": [
-        { "label": "לתיאום וקבלת הצעה", "href": "#contact", "style": "primary" }
+        {
+          "label": "לתיאום וקבלת הצעה",
+          "href": "#contact",
+          "style": "primary"
+        }
       ]
     },
     {
@@ -154,11 +221,23 @@
         "מיחם מים חמים · מקרר · פריזר",
         "ציוד להקרנה ומגבר — והכי חשוב: אווירה מיוחדת ומרגיעה 😇"
       ],
-      "chips": ["כולל סידור ופירוק שולחנות וכסאות", "בר/בת מצווה", "בריתות ומפגשים"],
+      "chips": [
+        "כולל סידור ופירוק שולחנות וכסאות",
+        "בר/בת מצווה",
+        "בריתות ומפגשים"
+      ],
       "softNote": "",
-      "priceTag": { "prefix": "החל מ־", "amount": "2,300₪", "suffix": " לאירוע" },
+      "priceTag": {
+        "prefix": "החל מ־",
+        "amount": "2,300₪",
+        "suffix": "לאירוע"
+      },
       "actions": [
-        { "label": "לבדיקת תאריך פנוי", "href": "#contact", "style": "primary" }
+        {
+          "label": "לבדיקת תאריך פנוי",
+          "href": "#contact",
+          "style": "primary"
+        }
       ]
     },
     {
@@ -177,9 +256,17 @@
       ],
       "chips": [],
       "softNote": "✨ ניתן להוסיף גם: מתנפחים, וופל בלגי, צ'יפסר, קרפ, פופקורן ומכונת נקניקיות.",
-      "priceTag": { "prefix": "החל מ־", "amount": "2,000₪", "suffix": " ל־5 שעות" },
+      "priceTag": {
+        "prefix": "החל מ־",
+        "amount": "2,000₪",
+        "suffix": "ל־5 שעות"
+      },
       "actions": [
-        { "label": "להזמנת יום כיף", "href": "#contact", "style": "primary" }
+        {
+          "label": "להזמנת יום כיף",
+          "href": "#contact",
+          "style": "primary"
+        }
       ]
     }
   ],
@@ -193,28 +280,76 @@
       {
         "heading": "🍇 בציר",
         "images": [
-          { "src": "assets/images/bazir-vineyard.jpg", "alt": "כרמי שילה", "size": "wide" },
-          { "src": "assets/images/story-era-portrait.jpg", "alt": "עירא בכרמים", "size": "" },
-          { "src": "assets/images/hero-aerial.jpg", "alt": "מבט על הכרמים", "size": "" }
+          {
+            "src": "assets/images/bazir-vineyard.jpg",
+            "alt": "כרמי שילה",
+            "size": "wide"
+          },
+          {
+            "src": "assets/images/story-era-portrait.jpg",
+            "alt": "עירא בכרמים",
+            "size": ""
+          },
+          {
+            "src": "assets/images/hero-aerial.jpg",
+            "alt": "מבט על הכרמים",
+            "size": ""
+          }
         ]
       },
       {
         "heading": "🏡 חוויה משפחתית",
         "images": [
-          { "src": "assets/images/family-hammocks.jpg", "alt": "המאקים בבוסתן", "size": "tall" },
-          { "src": "assets/images/family-foosball.jpg", "alt": "משחקי שולחן", "size": "" },
-          { "src": "assets/images/family-pita.jpg", "alt": "הכנת פיתות", "size": "" },
-          { "src": "assets/images/agri-tractor.jpg", "alt": "סיור טרקטור", "size": "" },
-          { "src": "assets/images/games-collage.jpg", "alt": "פעילויות ומשחקים", "size": "" }
+          {
+            "src": "assets/images/family-hammocks.jpg",
+            "alt": "המאקים בבוסתן",
+            "size": "tall"
+          },
+          {
+            "src": "assets/images/family-foosball.jpg",
+            "alt": "משחקי שולחן",
+            "size": ""
+          },
+          {
+            "src": "assets/images/family-pita.jpg",
+            "alt": "הכנת פיתות",
+            "size": ""
+          },
+          {
+            "src": "assets/images/agri-tractor.jpg",
+            "alt": "סיור טרקטור",
+            "size": ""
+          },
+          {
+            "src": "assets/images/games-collage.jpg",
+            "alt": "פעילויות ומשחקים",
+            "size": ""
+          }
         ]
       },
       {
         "heading": "🎉 אירועים בבוסתן",
         "images": [
-          { "src": "assets/images/event-buffet.jpg", "alt": "מזנון אירוע", "size": "wide" },
-          { "src": "assets/images/event-flowers.jpg", "alt": "עריכת שולחן פסטורלית", "size": "" },
-          { "src": "assets/images/event-bbq.jpg", "alt": "על האש בבוסתן", "size": "" },
-          { "src": "assets/images/event-group.jpg", "alt": "מפגש בבוסתן", "size": "" }
+          {
+            "src": "assets/images/event-buffet.jpg",
+            "alt": "מזנון אירוע",
+            "size": "wide"
+          },
+          {
+            "src": "assets/images/event-flowers.jpg",
+            "alt": "עריכת שולחן פסטורלית",
+            "size": ""
+          },
+          {
+            "src": "assets/images/event-bbq.jpg",
+            "alt": "על האש בבוסתן",
+            "size": ""
+          },
+          {
+            "src": "assets/images/event-group.jpg",
+            "alt": "מפגש בבוסתן",
+            "size": ""
+          }
         ]
       }
     ]
@@ -223,7 +358,10 @@
     "badge": "🍇 עונת הבציר 2026",
     "title": "בציר עצמי — מאמצע אב ועד סוכות",
     "lead": "פעילות הבציר והכנת מיץ הענבים נפתחת באמצע אוגוסט (המועד המדויק יתעדכן) ונמשכת עד סוף ספטמבר, כולל חג הסוכות. האירועים והנופש המשפחתי זמינים לאורך הקיץ.",
-    "ctaPrimary": { "label": "שריון מקום לבציר", "href": "#contact" },
+    "ctaPrimary": {
+      "label": "שריון מקום לבציר",
+      "href": "#contact"
+    },
     "waLabel": "הצטרפו לעדכונים בוואטסאפ"
   },
   "english": {
@@ -245,13 +383,19 @@
         "title": "🚜 Tractor & Wagon Tour",
         "cost": "$250 / group",
         "body": "A guided ride through the vineyards to an ancient water cistern — a journey of history, beauty and deep roots.",
-        "list": ["Minimum 10, maximum 20 people", "$250 for the group"]
+        "list": [
+          "Minimum 10, maximum 20 people",
+          "$250 for the group"
+        ]
       },
       {
         "title": "🫓 Pita on a Saje",
         "cost": "$160 / group",
         "body": "Bake your own fresh pita over an open fire — a hands-on taste of tradition.",
-        "list": ["Up to 20 people", "$160 for the group"]
+        "list": [
+          "Up to 20 people",
+          "$160 for the group"
+        ]
       },
       {
         "title": "👨‍🌾 Meet Era Rapaport",
@@ -295,11 +439,26 @@
     "desc": "משק רפפורט — בציר, חוויה חקלאית, אירועים ונופש משפחתי בלב נחל שילה. מהבציר לבקבוק, ומהאדמה אל הלב.",
     "offersTitle": "ההצעות שלנו",
     "offers": [
-      { "label": "בציר — מהבציר לבקבוק", "href": "#bazir" },
-      { "label": "חוויה חקלאית", "href": "#agri" },
-      { "label": "אירוע בבוסתן", "href": "#event" },
-      { "label": "נופש משפחתי", "href": "#family" },
-      { "label": "For Tourists", "href": "#english" }
+      {
+        "label": "בציר — מהבציר לבקבוק",
+        "href": "#bazir"
+      },
+      {
+        "label": "חוויה חקלאית",
+        "href": "#agri"
+      },
+      {
+        "label": "אירוע בבוסתן",
+        "href": "#event"
+      },
+      {
+        "label": "נופש משפחתי",
+        "href": "#family"
+      },
+      {
+        "label": "For Tourists",
+        "href": "#english"
+      }
     ],
     "contactTitle": "יצירת קשר",
     "copyright": "ביכורי שילה · משק רפפורט · נחל שילה. כל הזכויות שמורות."
