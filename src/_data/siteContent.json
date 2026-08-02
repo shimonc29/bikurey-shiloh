@@ -101,7 +101,7 @@
         "emoji": "🍇",
         "title": "בציר — מהבציר לבקבוק",
         "text": "קטפו ענבים בכרמי שילה והכינו בקבוק מיץ ענבים טרי משלכם. חוויה משפחתית מתוקה לכל הגילאים.",
-        "priceMain": "החל מ־45₪",
+        "priceMain": "45₪",
         "priceUnit": "לאדם",
         "href": "#bazir"
       },
@@ -121,7 +121,7 @@
         "emoji": "🎉",
         "title": "אירוע בבוסתן",
         "text": "בוסתן קסום ומרגיע לבר/בת מצווה, ברית, מפגש משפחתי או שמחה — עם כל הציוד, הריהוט וההגברה.",
-        "priceMain": "החל מ־2,300₪",
+        "priceMain": "2,300₪",
         "priceUnit": "לאירוע",
         "href": "#event"
       },
@@ -131,7 +131,7 @@
         "emoji": "🏡",
         "title": "נופש משפחתי",
         "text": "המתחם כולו שלכם — משחקים, קריוקי, סאג' וטאבון, זולה ובוסתן. יום כיף מושלם למשפחות ולקבוצות.",
-        "priceMain": "החל מ־2,000₪",
+        "priceMain": "2,000₪",
         "priceUnit": "ל־5 שעות",
         "href": "#family"
       }
@@ -359,7 +359,7 @@
       {
         "title": "🍇 Grape Picking Experience",
         "cost": "$25 / person",
-        "body": "Pick your own grapes and make your very own bottle of fresh grape juice. Perform terumot & ma'asrot yourself, surrounded by the breathtaking biblical landscape. Fun for all ages (3+).\n\n*Season: mid-August through the end of September, including Sukkot.*",
+        "body": "Pick your own grapes and make your very own bottle of fresh grape juice. Perform terumot & ma'asrot yourself, surrounded by the breathtaking biblical landscape. Fun for all ages (3+).\n\n_Season: mid-August through the end of September, including Sukkot._",
         "list": []
       }
     ],
