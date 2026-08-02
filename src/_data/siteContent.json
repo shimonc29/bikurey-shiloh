@@ -407,7 +407,7 @@
     "copyright": "ביכורי שילה · משק רפפורט · נחל שילה. כל הזכויות שמורות."
   },
   "popup": {
-    "enabled": false,
+    "enabled": true,
     "image": "/assets/images/WhatsApp Image 2026-07-30 at 11.38.57 AM.jpeg",
     "alt": "ברוכים הבאים לביכורי שילה",
     "link": ""
