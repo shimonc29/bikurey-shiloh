@@ -66,26 +66,38 @@
     });
   }
 
-// פופאפ כניסה — מוצג בכל כניסה לעמוד
+// פופאפ כניסה — מוצג עד 5 פעמים לכל מבקר, ואז נעצר
   var popup = document.getElementById('sitePopup');
   if (popup) {
+    var COUNT_KEY = 'bs_popup_count';
+    var MAX_SHOWS = 5;
+    var shown = 0;
+    try { shown = parseInt(localStorage.getItem(COUNT_KEY), 10) || 0; } catch (e) {}
+
     function closePopup() {
       popup.classList.remove('open');
       popup.setAttribute('hidden', '');
     }
-    // השהיה קטנה כדי שהעמוד ייטען לפני שהפופאפ קופץ
-    setTimeout(function () {
-      popup.removeAttribute('hidden');
-      popup.classList.add('open');
-    }, 700);
-    var closeBtn = document.getElementById('popupClose');
-    if (closeBtn) closeBtn.addEventListener('click', closePopup);
-    // סגירה בלחיצה על הרקע (מחוץ לתמונה)
-    popup.addEventListener('click', function (e) {
-      if (e.target === popup) closePopup();
-    });
-    // סגירה עם Esc
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && popup.classList.contains('open')) closePopup();
-    });
+
+    if (shown < MAX_SHOWS) {
+      // מגדילים את המונה: הפופאפ מוצג עוד פעם אחת בכניסה הזו
+      try { localStorage.setItem(COUNT_KEY, String(shown + 1)); } catch (e) {}
+
+      // השהיה קטנה כדי שהעמוד ייטען לפני שהפופאפ קופץ
+      setTimeout(function () {
+        popup.removeAttribute('hidden');
+        popup.classList.add('open');
+      }, 700);
+
+      var closeBtn = document.getElementById('popupClose');
+      if (closeBtn) closeBtn.addEventListener('click', closePopup);
+      // סגירה בלחיצה על הרקע (מחוץ לתמונה)
+      popup.addEventListener('click', function (e) {
+        if (e.target === popup) closePopup();
+      });
+      // סגירה עם Esc
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && popup.classList.contains('open')) closePopup();
+      });
+    }
   }})();
